@@ -1,27 +1,27 @@
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
+import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from '@/components/ui/card';
 import {
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
-} from "@/components/ui/field"
-import { Input } from "@/components/ui/input"
-import { NavLink } from "react-router-dom"
+} from '@/components/ui/field';
+import { Input } from '@/components/ui/input';
+import { NavLink } from 'react-router-dom';
 
 export function LoginForm({
   className,
   ...props
-}: React.ComponentProps<"div">) {
+}: React.ComponentProps<'div'>) {
   return (
-    <div className={cn("flex flex-col gap-6", className)} {...props}>
+    <div className={cn('flex flex-col gap-6', className)} {...props}>
       <Card className="bg-gray text-white">
         <CardHeader>
           <CardTitle>Login to your account</CardTitle>
@@ -59,7 +59,8 @@ export function LoginForm({
                   Login with Google
                 </Button>
                 <FieldDescription className="text-center">
-                  Don&apos;t have an account? <NavLink to="/signin">Sign up</NavLink>
+                  Don&apos;t have an account?{' '}
+                  <NavLink to="/signin">Sign up</NavLink>
                 </FieldDescription>
               </Field>
             </FieldGroup>
@@ -67,5 +68,5 @@ export function LoginForm({
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }

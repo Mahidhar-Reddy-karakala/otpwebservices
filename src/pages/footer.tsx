@@ -93,10 +93,12 @@ export default function Footer() {
               </div>
               <span className="font-bold text-white">easyauth.in</span>
             </div>
-            <p className="text-gray-500 text-sm">© 2025 EasyAuth. All rights reserved.</p>
+            <p className="text-gray-500 text-sm">
+              © 2025 EasyAuth. All rights reserved.
+            </p>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }
