@@ -1,27 +1,38 @@
-
-import { Button } from "@/components/ui/button";
-import { Card,CardContent,CardDescription,CardHeader,CardTitle } from "@/components/ui/card";
-import { Field,FieldDescription,FieldGroup,FieldLabel } from "@/components/ui/field";
-import {Input} from "@/components/ui/input"
-import { NavLink } from "react-router-dom";
-export default function SignInForm({...props}:React.ComponentProps<typeof Card>){
-    return(
-      
-        <Card {...props} className="bg-gray border-t text-white">
-         <CardHeader>
-            <CardTitle>Create the Account</CardTitle>
-            <CardDescription>Enter your email and password to create account.</CardDescription>
-         </CardHeader>
-         <CardContent>
-         <form>
-            <FieldGroup>
-                <Field> 
-                    <FieldLabel htmlFor="name">
-                        Full Name
-                    </FieldLabel>
-                    <Input id="name" type="text" placeholder="name" required/>
-                </Field>
-                <Field>
+import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import {
+  Field,
+  FieldDescription,
+  FieldGroup,
+  FieldLabel,
+} from '@/components/ui/field';
+import { Input } from '@/components/ui/input';
+import { NavLink } from 'react-router-dom';
+export default function SignInForm({
+  ...props
+}: React.ComponentProps<typeof Card>) {
+  return (
+    <Card {...props} className="bg-gray border-t text-white">
+      <CardHeader>
+        <CardTitle>Create the Account</CardTitle>
+        <CardDescription>
+          Enter your email and password to create account.
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <form>
+          <FieldGroup>
+            <Field>
+              <FieldLabel htmlFor="name">Full Name</FieldLabel>
+              <Input id="name" type="text" placeholder="name" required />
+            </Field>
+            <Field>
               <FieldLabel htmlFor="email">Email</FieldLabel>
               <Input
                 id="email"
@@ -49,19 +60,19 @@ export default function SignInForm({...props}:React.ComponentProps<typeof Card>)
               <FieldDescription>Please confirm your password.</FieldDescription>
             </Field>
             <FieldGroup>
-                <Field>
-                    <Button type="submit">Create Account</Button>
-                    <Button variant="secondary" type="button">
-                    Sign up with Google
-                    </Button>
-                    <FieldDescription className="px-6 text-center">
-                    Already have an account? <NavLink to="/login">Log in</NavLink>
-                    </FieldDescription>
-                </Field>
-                </FieldGroup>
-            </FieldGroup>            
-         </form>
-         </CardContent>
-        </Card>
-    )
+              <Field>
+                <Button type="submit">Create Account</Button>
+                <Button variant="secondary" type="button">
+                  Sign up with Google
+                </Button>
+                <FieldDescription className="px-6 text-center">
+                  Already have an account? <NavLink to="/login">Log in</NavLink>
+                </FieldDescription>
+              </Field>
+            </FieldGroup>
+          </FieldGroup>
+        </form>
+      </CardContent>
+    </Card>
+  );
 }
